@@ -1,15 +1,47 @@
+/* По умолчанию (светлая) */
+[data-theme="light"] {
+    --primary-color: #4b6cb7;
+    --primary-dark: #182848;
+    --bg-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-secondary: #666666;
+    --border-color: #eaeaea;
+    --hover-bg: #f8f9ff;
+    --hobby-bg: #f0f4ff;
+    --gradient-start: #4b6cb7;
+    --gradient-end: #182848;
+}
+
+/* Темная тема */
+[data-theme="dark"] {
+    --primary-color: #8b5cf6;
+    --primary-dark: #5c25bb;
+    --bg-color: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-color: #fafafa;
+    --text-secondary: #a8a8a8;
+    --border-color: #333333;
+    --hover-bg: #2a2a2a;
+    --hobby-bg: #39338b;
+    /* --gradient-start: #1a1a1a;
+    --gradient-end: #0a0a0a; */
+}
+
 /* Основные стили */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body {
-    background-color: #f5f7fa;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 .container {
@@ -18,14 +50,13 @@ body {
     padding: 20px;
 }
 
-/* Шапка резюме */
+/* Шапка */
 .header {
     display: flex;
-    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     color: white;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
 
@@ -79,10 +110,52 @@ body {
 
 .contact-link:hover {
     text-decoration: underline;
-    color: #e0e7ff;
+    opacity: 0.8;
 }
 
-/* Основной контент */
+/* Переключатель темы */
+.theme-toggle {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle-btn {
+    background: var(--card-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    width: 50px;
+    height: 26px;
+    padding: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    border-color: var(--primary-dark);
+}
+
+.theme-toggle-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle-icon {
+    left: calc(100% - 22px);
+    background: #8b5cf6;
+}
+
+/* Контент */
 .content {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -90,10 +163,9 @@ body {
 }
 
 .left-column, .right-column {
-    background: white;
+    background: var(--card-bg);
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 .section {
@@ -102,15 +174,16 @@ body {
 
 .section-title {
     font-size: 1.4rem;
-    color: #4b6cb7;
+    color: var(--primary-color);
     margin-bottom: 15px;
     padding-bottom: 8px;
-    border-bottom: 2px solid #eaeaea;
+    border-bottom: 2px solid var(--border-color);
 }
 
 /* О себе */
 .about-text {
     text-align: justify;
+    color: var(--text-secondary);
 }
 
 /* Образование */
@@ -120,7 +193,7 @@ body {
 
 .education-year {
     font-weight: bold;
-    color: #4b6cb7;
+    color: var(--primary-color);
 }
 
 .education-degree {
@@ -129,7 +202,7 @@ body {
 }
 
 .education-institution {
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Навыки */
@@ -144,17 +217,18 @@ body {
     align-items: center;
     gap: 10px;
     padding: 12px;
-    background: #f8f9ff;
+    background: var(--hover-bg);
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .skill-with-icon:hover {
-    background: #eef2ff;
+    background: var(--border-color);
+    transform: translateY(-2px);
 }
 
 .skill-with-icon i {
-    color: #4b6cb7;
+    color: var(--primary-color);
     font-size: 1.2rem;
     width: 20px;
 }
@@ -163,7 +237,7 @@ body {
 .project-item {
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .project-item:last-child {
@@ -173,11 +247,17 @@ body {
 .project-title {
     font-weight: 900;
     margin-bottom: 5px;
+    color: var(--primary-color);
 }
 
 .project-description {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.95rem;
+}
+
+.project-description p, .project-description li {
+    margin-bottom: 5px;
+    color: var(--text-secondary);
 }
 
 .project-github-item {
@@ -189,7 +269,7 @@ body {
 }
 
 .project-github-item a {
-    color: #4b6cb7;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -202,6 +282,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    color: var(--text-secondary);
 }
 
 /* Хобби */
@@ -212,10 +293,17 @@ body {
 }
 
 .hobby {
-    background: #f0f4ff;
+    background: var(--hobby-bg);
+    color: var(--text-color);
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.hobby:hover {
+    background: var(--primary-color);
+    color: white;
 }
 
 /* Адаптивность */
@@ -236,4 +324,11 @@ body {
     .contact-info {
         justify-content: center;
     }
+    
+    .theme-toggle {
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
 }
+
