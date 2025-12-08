@@ -8,187 +8,189 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <img src="Assets/umnyj-chelovek-v-ochkah.jpg" alt="Фото" class="profile-img">
-            <div class="header-info">
-                <h1 class="name">Савин Денис</h1>
-                <p class="title">Backend-разработчик на C# .NET</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fab fa-telegram"></i>
-                        <a href="https://t.me/sDenissss" class="contact-link">Telegram</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/Underfnd" class="contact-link">Github</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>savin.denis.06@mail.ru</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>г. Санкт-Петербург</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+7 (921) 565-82-74</span>
-                    </div>
-                    <div class="contact-item theme-toggle">
-                        <i class="fas fa-moon" id="theme-icon"></i>
-                        <button id="theme-toggle" class="theme-toggle-btn">
-                            <span class="theme-toggle-icon"></span>
-                        </button>
+    <main>
+        <div class="container">
+            <header>
+                <img src="Assets/umnyj-chelovek-v-ochkah.jpg" alt="Фото" class="profile-img">
+                <div class="header-info">
+                    <h1 class="name">Савин Денис</h1>
+                    <p class="title">Backend-разработчик на C# .NET</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <a href="https://t.me/sDenissss" class="contact-link">Telegram</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/Underfnd" class="contact-link">Github</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>savin.denis.06@mail.ru</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Санкт-Петербург</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (921) 565-82-74</span>
+                        </div>
+                        <div class="contact-item theme-toggle">
+                            <i class="fas fa-moon" id="theme-icon"></i>
+                            <button id="theme-toggle" class="theme-toggle-btn">
+                                <span class="theme-toggle-icon"></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        
-        <div class="content">
-            <div class="left-column">
-                <section class="section">
-                    <h2 class="section-title">О себе</h2>
-                    <p class="about-text">
-                        Студент 3 курса ИТМО по направлению "Программная инженерия". 
-                        Специализируюсь на backend-разработке на C# .NET. Имею практический 
-                        опыт создания Web API, RESTful сервисов, работы с базами данных и реализации real-time 
-                        функциональности. В работе следую принципам SOLID, KISS, DRY и активно 
-                        изучаю современные подходы к разработке (Clean Architecture, CQRS).
-                        Ищу стажировку для применения навыков в коммерческих проектах.
-                        Мотивированный студент, ищущий возможность применить полученные 
-                        знания на практике. Готов обучаться и развиваться
-                    </p>
-                </section>
-                
-                <section class="section">
-                    <h2 class="section-title">Образование</h2>
-                    <div class="education-item">
-                        <div class="education-year">2023 - 2027</div>
-                        <div class="education-degree">Компьютерные технологии в дизайне: программная инженерия</div>
-                        <div class="education-institution">Национальный исследовательский университет ИТМО</div>
-                    </div>
-                </section>
-                
-                <section class="section">
-                    <h2 class="section-title">Проекты</h2>
-                    
-                    <div class="project-item">
-                        <div class="project-title">LinkUp — Real-Time Chat App (Backend + Frontend)</div>
-                        <div class="project-description">
-                            <p>Веб-приложение для обмена сообщениями в реальном времени с регистрацией пользователей и созданием чатов.</p>
-                            <p><strong>Функционал:</strong> JWT-аутентификация, чаты по уникальным именам, реальное время через SignalR, REST API для управления чатами.</p>
-                            <p><strong>Технологии:</strong> ASP.NET Core Web API, Entity Framework Core (PostgreSQL), MediatR (CQRS), SignalR, JWT, HTML/CSS/JavaScript.</p>
-                            <p><strong>Особенности:</strong> Чистая архитектура, безопасность, современная структура проекта.</p>
-                            <div class="project-github-item">
-                                <i class="fab fa-github"></i>
-                                <a href="https://github.com/Underfnd/LinkUp" class="contact-link">Github</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-item">
-                        <div class="project-title">Educational Quiz Telegram Bot</div>
-                        <div class="project-description">
-                            <p>Telegram бот для образовательных викторин</p>
-                            <p><strong>Функционал:</strong> Регистрация пользователей через Telegram, викторины с выбором ответов, админ-панель для управления контентом.</p>
-                            <p><strong>Технологии:</strong> C#, .NET, PostgreSQL, Telegram Bot API.</p>
-                            <p><strong>Особенности:</strong> Гибкая система добавления вопросов и квизов через БД, модульная архитектура.</p>
-                            <div class="project-github-item">
-                                <i class="fab fa-github"></i>
-                                <a href="https://github.com/Underfnd/EducationalQuizBot" class="contact-link">Github</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-item">
-                        <div class="project-title">Tourist Guide Labs (4 учебных проекта)</div>
-                        <div class="project-description">
-                            <p>Серия мини-проектов туристического гида с различными технологическими стеками:</p>
-                            <ul>
-                                <p><strong>Консольное приложение</strong> - работа с коллекциями в памяти, поиск и планирование маршрутов, unit-тесты</p>
-                                <p><strong>Консольное приложение с БД</strong> - Entity Framework Core + SQLite, хранение истории и достопримечательностей</p>
-                                <p><strong>Веб-приложение</strong> - ASP.NET Core Web API + SQLite + статический фронтенд (HTML/CSS)</p>
-                                <p><strong>WPF приложение</strong> - десктопный интерфейс с локальной логикой</p>
-                            </ul>
-                            <p><strong>Технологии:</strong> C#, ASP.NET Core, Entity Framework Core, SQLite, WPF, xUnit.</p>
-                            <p><strong>Особенности:</strong> Демонстрация различных подходов к разработке одного приложения.</p>
-                            <div class="project-github-item">
-                                <i class="fab fa-github"></i>
-                                <a href="https://github.com/Underfnd/Tourist-Guide-2024" class="contact-link">Github</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            </header>
             
-            <div class="right-column">
-                <section class="section">
-                    <h2 class="section-title">Навыки</h2>
-                    <div class="skills-grid">
-                        <div class="skill-with-icon">
-                            <i class="fab fa-microsoft"></i>
-                            <span>C# / .NET</span>
+            <div class="content">
+                <div class="left-column">
+                    <section class="section">
+                        <h2 class="section-title">О себе</h2>
+                        <p class="about-text">
+                            Студент 3 курса ИТМО по направлению "Программная инженерия". 
+                            Специализируюсь на backend-разработке на C# .NET. Имею практический 
+                            опыт создания Web API, RESTful сервисов, работы с базами данных и реализации real-time 
+                            функциональности. В работе следую принципам SOLID, KISS, DRY и активно 
+                            изучаю современные подходы к разработке (Clean Architecture, CQRS).
+                            Ищу стажировку для применения навыков в коммерческих проектах.
+                            Мотивированный студент, ищущий возможность применить полученные 
+                            знания на практике. Готов обучаться и развиваться
+                        </p>
+                    </section>
+                    
+                    <section class="section">
+                        <h2 class="section-title">Образование</h2>
+                        <div class="education-item">
+                            <div class="education-year">2023 - 2027</div>
+                            <div class="education-degree">Компьютерные технологии в дизайне: программная инженерия</div>
+                            <div class="education-institution">Национальный исследовательский университет ИТМО</div>
                         </div>
-                        <div class="skill-with-icon">
-                            <i class="fas fa-globe"></i>
-                            <span>ASP.NET Core</span>
+                    </section>
+                    
+                    <section class="section">
+                        <h2 class="section-title">Проекты</h2>
+                        
+                        <div class="project-item">
+                            <div class="project-title">LinkUp — Real-Time Chat App (Backend + Frontend)</div>
+                            <div class="project-description">
+                                <p>Веб-приложение для обмена сообщениями в реальном времени с регистрацией пользователей и созданием чатов.</p>
+                                <p><strong>Функционал:</strong> JWT-аутентификация, чаты по уникальным именам, реальное время через SignalR, REST API для управления чатами.</p>
+                                <p><strong>Технологии:</strong> ASP.NET Core Web API, Entity Framework Core (PostgreSQL), MediatR (CQRS), SignalR, JWT, HTML/CSS/JavaScript.</p>
+                                <p><strong>Особенности:</strong> Чистая архитектура, безопасность, современная структура проекта.</p>
+                                <div class="project-github-item">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/Underfnd/LinkUp" class="contact-link">Github</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-with-icon">
-                            <i class="fas fa-database"></i>
-                            <span>SQL / PostgreSQL / SqLite</span>
+                        
+                        <div class="project-item">
+                            <div class="project-title">Educational Quiz Telegram Bot</div>
+                            <div class="project-description">
+                                <p>Telegram бот для образовательных викторин</p>
+                                <p><strong>Функционал:</strong> Регистрация пользователей через Telegram, викторины с выбором ответов, админ-панель для управления контентом.</p>
+                                <p><strong>Технологии:</strong> C#, .NET, PostgreSQL, Telegram Bot API.</p>
+                                <p><strong>Особенности:</strong> Гибкая система добавления вопросов и квизов через БД, модульная архитектура.</p>
+                                <div class="project-github-item">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/Underfnd/EducationalQuizBot" class="contact-link">Github</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-with-icon">
-                            <i class="fas fa-layer-group"></i>
-                            <span>Entity Framework Core</span>
+                        
+                        <div class="project-item">
+                            <div class="project-title">Tourist Guide Labs (4 учебных проекта)</div>
+                            <div class="project-description">
+                                <p>Серия мини-проектов туристического гида с различными технологическими стеками:</p>
+                                <ul>
+                                    <p><strong>Консольное приложение</strong> - работа с коллекциями в памяти, поиск и планирование маршрутов, unit-тесты</p>
+                                    <p><strong>Консольное приложение с БД</strong> - Entity Framework Core + SQLite, хранение истории и достопримечательностей</p>
+                                    <p><strong>Веб-приложение</strong> - ASP.NET Core Web API + SQLite + статический фронтенд (HTML/CSS)</p>
+                                    <p><strong>WPF приложение</strong> - десктопный интерфейс с локальной логикой</p>
+                                </ul>
+                                <p><strong>Технологии:</strong> C#, ASP.NET Core, Entity Framework Core, SQLite, WPF, xUnit.</p>
+                                <p><strong>Особенности:</strong> Демонстрация различных подходов к разработке одного приложения.</p>
+                                <div class="project-github-item">
+                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/Underfnd/Tourist-Guide-2024" class="contact-link">Github</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-with-icon">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker / Docker Compose</span>
-                        </div>
-                        <div class="skill-with-icon">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git / GitHub</span>
-                        </div>
-                        <div class="skill-with-icon">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML / CSS / JS</span>
-                        </div>
-                        <div class="skill-with-icon">
-                            <i class="fas fa-desktop"></i>
-                            <span>WPF</span>
-                        </div>
-                        <div class="skill-with-icon">
-                            <i class="fas fa-network-wired"></i>
-                            <span>Nginx</span>
-                        </div>
-                    </div>
-                </section>
-                                                                
-                <section class="section">
-                    <h2 class="section-title">Языки</h2>
-                    <div class="language-item">
-                        <span>Русский</span>
-                        <span>Родной</span>
-                    </div>
-                    <div class="language-item">
-                        <span>Английский</span>
-                        <span>B1 (Intermediate)</span>
-                    </div>
-                </section>
+                    </section>
+                </div>
                 
-                <section class="section">
-                    <h2 class="section-title">Интересы</h2>
-                    <div class="hobbies">
-                        <span class="hobby">Программирование</span>
-                        <span class="hobby">Настольные игры</span>
-                        <span class="hobby">Технологии</span> 
-                        <span class="hobby">Фильмы</span> 
-                    </div>
-                </section>
+                <div class="right-column">
+                    <section class="section">
+                        <h2 class="section-title">Навыки</h2>
+                        <div class="skills-grid">
+                            <div class="skill-with-icon">
+                                <i class="fab fa-microsoft"></i>
+                                <span>C# / .NET</span>
+                            </div>
+                            <div class="skill-with-icon">
+                                <i class="fas fa-globe"></i>
+                                <span>ASP.NET Core</span>
+                            </div>
+                            <div class="skill-with-icon">
+                                <i class="fas fa-database"></i>
+                                <span>SQL / PostgreSQL / SqLite</span>
+                            </div>
+                            <div class="skill-with-icon">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Entity Framework Core</span>
+                            </div>
+                            <div class="skill-with-icon">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker / Docker Compose</span>
+                            </div>
+                            <div class="skill-with-icon">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git / GitHub</span>
+                            </div>
+                            <div class="skill-with-icon">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML / CSS / JS</span>
+                            </div>
+                            <div class="skill-with-icon">
+                                <i class="fas fa-desktop"></i>
+                                <span>WPF</span>
+                            </div>
+                            <div class="skill-with-icon">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Nginx</span>
+                            </div>
+                        </div>
+                    </section>
+                                                                    
+                    <section class="section">
+                        <h2 class="section-title">Языки</h2>
+                        <div class="language-item">
+                            <span>Русский</span>
+                            <span>Родной</span>
+                        </div>
+                        <div class="language-item">
+                            <span>Английский</span>
+                            <span>B1 (Intermediate)</span>
+                        </div>
+                    </section>
+                    
+                    <section class="section">
+                        <h2 class="section-title">Интересы</h2>
+                        <div class="hobbies">
+                            <span class="hobby">Программирование</span>
+                            <span class="hobby">Настольные игры</span>
+                            <span class="hobby">Технологии</span> 
+                            <span class="hobby">Фильмы</span> 
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+        <script src="switch_theme.js"></script>
+    </main>
 </body>
 </html>
